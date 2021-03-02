@@ -5,6 +5,10 @@
   padding: 0;
   width: 15em;
 }
+a{
+  color :#2c3a41;
+  text-decoration: none;
+}
 .heroes li {
   cursor: pointer;
   position: relative;

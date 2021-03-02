@@ -15,17 +15,13 @@ export class HeroesComponent implements OnInit {
 
   constructor(private heroService : HeroService, private messageService: MessageService){}
 
-  onSelect(hero : Hero){
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero is : ${hero.name.toUpperCase()}`);
-  }
 
   ngOnInit(): void {
     this.getHeroes();
   }
 
   getHeroes() : void{
-    console.log(this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes));
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
 }
